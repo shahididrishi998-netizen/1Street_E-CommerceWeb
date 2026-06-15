@@ -28,7 +28,7 @@ document.getElementById("loginButton").onclick = () => {
   const password = document.getElementById("loginPass").value;
   if (!email || !password) { toast("Fill in all fields", "#e60023"); return; }
 
-  fetch("http://1street-backend.onrender.com/api/auth/login", {
+  fetch("https://onestreet-e-commerceweb.onrender.com/api/auth/login", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email, password })
@@ -57,7 +57,7 @@ document.getElementById("registerButton").onclick = () => {
   const password = document.getElementById("regPass").value;
   if (!name || !email || !password) { toast("Fill in all fields", "#e60023"); return; }
 
-  fetch("http://1street-backend.onrender.com/api/auth/register", {
+  fetch("https://onestreet-e-commerceweb.onrender.com/api/auth/register", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ name, email, password })
