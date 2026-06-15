@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1street — Shop</title>
+  <link rel="stylesheet" href="category.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <h1 class="logo" onclick="location.href='../1street.html'">1street</h1>
+    <div class="nav-search">
+      <input type="text" id="navSearch" placeholder="Search products...">
+    </div>
+    <div class="nav-icons">
+      <span onclick="location.href='cart.html'" style="position:relative">🛒<span id="cartBadge" class="badge">0</span></span>
+      <button id="searchToggle">🔍</button>
+      <span onclick="location.href='../login.html'">👤</span>
+    </div>
+  </div>
+
+  <!-- FILTER BAR -->
+  <div class="filter-bar">
+    <select id="brandFilter">
+      <option value="">All Brands</option>
+      <option value="Nike">Nike</option>
+      <option value="Adidas">Adidas</option>
+      <option value="Puma">Puma</option>
+      <option value="1street">1street</option>
+    </select>
+    <select id="categoryFilter">
+      <option value="">All Types</option>
+      <option value="Jackets">Jackets</option>
+      <option value="Hoodies">Hoodies</option>
+      <option value="Shirts">Shirts</option>
+      <option value="T-Shirts">T-Shirts</option>
+    </select>
+    <input type="number" id="priceMin" placeholder="Min ₹">
+    <input type="number" id="priceMax" placeholder="Max ₹">
+    <label class="deal-check"><input type="checkbox" id="dealFilter"> Top Deals</label>
+    <button id="applyFilter">Apply</button>
+    <button id="resetFilter">Reset</button>
+  </div>
+
+  <div class="page-header">
+    <h2 id="pageTitle">All Products</h2>
+    <p id="productCount"></p>
+  </div>
+
+  <!-- PRODUCT GRID -->
+  <div id="productGrid" class="product-grid"></div>
+
+  <script src="category.js"></script>
+</body>
+</html>

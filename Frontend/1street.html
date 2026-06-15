@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1street - Men's Wear</title>
+  <link rel="stylesheet" href="1street.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <h1 class="logo">1street</h1>
+    <div class="nav-icons">
+      <span class="cart" onclick="location.href='1street/cart.html'">🛒</span>
+      <span class="user" onclick="location.href='login.html'">👤</span>
+      <span class="menu">☰</span>
+    </div>
+  </nav>
+
+  <!-- SEARCH -->
+  <div class="search-section">
+    <div class="search-wrapper">
+      <input type="text" id="searchInput" placeholder="Search jackets, hoodies, outfits...">
+      <span class="search-icon">🔍</span>
+      <div id="searchHistory" class="history-box"></div>
+    </div>
+  </div>
+
+  <!-- HERO with 3D Canvas -->
+  <section class="hero-section">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-content">
+      <p class="hero-tag">New Collection 2026</p>
+      <h1>Wear the <span>Street.</span><br>Own the Block.</h1>
+      <p class="hero-desc">Premium men's streetwear for those who live the culture, not just wear it.</p>
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="location.href='1street/category.html'">Shop Now</button>
+        <button class="btn-outline" onclick="document.getElementById('top-deals').scrollIntoView({behavior:'smooth'})">Top Deals ↓</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOP DEALS -->
+  <section class="top-deals reveal" id="top-deals">
+    <h2>🔥 Top Deals</h2>
+    <p class="section-sub">Handpicked — today only</p>
+    <div id="productGrid" class="grid"></div>
+  </section>
+
+  <!-- SHOP BY STYLE -->
+  <section class="categories reveal">
+    <h2>Shop by Style</h2>
+    <p class="section-sub">Find your vibe</p>
+    <div class="grid" id="categoryGrid"></div>
+  </section>
+
+  <!-- LATEST OUTFIT BANNER with 3D -->
+  <section class="latest reveal">
+    <canvas id="bannerCanvas"></canvas>
+    <div class="latest-content">
+      <p class="hero-tag">Featured Drop</p>
+      <h2>Latest Outfit Just<br>Dropped 🔥</h2>
+      <p>Midnight Camo Collection — Limited to 200 pieces.</p>
+      <button class="btn-primary" onclick="location.href='1street/category.html'">Grab Yours</button>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features reveal">
+    <div class="feature-card">
+      <span>🚚</span>
+      <h4>Free Delivery</h4>
+      <p>On orders above ₹999</p>
+    </div>
+    <div class="feature-card">
+      <span>🔄</span>
+      <h4>Easy Returns</h4>
+      <p>30-day hassle-free returns</p>
+    </div>
+    <div class="feature-card">
+      <span>🔒</span>
+      <h4>Secure Payments</h4>
+      <p>UPI, Cards, COD accepted</p>
+    </div>
+    <div class="feature-card">
+      <span>⭐</span>
+      <h4>Premium Quality</h4>
+      <p>Hand-tested fabrics only</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="reveal">
+    <h3>1street</h3>
+    <p>Premium men's fashion store.</p>
+    <div class="footer-links">
+      <a href="#">About</a>
+      <a href="#">Blog</a>
+      <a href="#">Returns</a>
+      <a href="#">Contact</a>
+    </div>
+    <p class="copy">© 2026 1street. All Rights Reserved. Made with ❤ in Mumbai</p>
+  </footer>
+
+  <script src="1street.js"></script>
+</body>
+</html>

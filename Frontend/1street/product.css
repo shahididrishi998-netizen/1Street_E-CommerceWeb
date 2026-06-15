@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&family=Montserrat:wght@500;700&display=swap');
+
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Poppins',sans-serif; background:#f5f6fa; color:#111; }
+
+/* NAVBAR */
+.navbar { position:sticky; top:0; z-index:1000; display:flex; justify-content:space-between; align-items:center; padding:16px 40px; background:rgba(0,0,0,0.88); backdrop-filter:blur(14px); color:white; box-shadow:0 4px 20px rgba(0,0,0,.25); }
+.logo { font-size:26px; font-family:'Playfair Display',serif; font-weight:700; letter-spacing:2px; cursor:pointer; }
+.nav-icons { display:flex; align-items:center; gap:18px; }
+.nav-icons span { cursor:pointer; font-size:15px; color:rgba(255,255,255,.75); transition:.25s; position:relative; }
+.nav-icons span:hover { color:#ffcc00; }
+.badge { position:absolute; top:-6px; right:-8px; background:#e60023; color:white; font-size:10px; font-weight:700; border-radius:50%; width:17px; height:17px; display:flex; align-items:center; justify-content:center; }
+
+/* PRODUCT PAGE */
+.product-page { display:grid; grid-template-columns:1fr 1fr; gap:60px; padding:50px 60px; max-width:1200px; margin:0 auto; align-items:start; }
+
+/* IMAGE */
+.img-wrap { border-radius:24px; overflow:hidden; background:white; box-shadow:0 12px 40px rgba(0,0,0,.1); position:sticky; top:90px; }
+.img-wrap img { width:100%; display:block; transition:.45s; }
+.img-wrap:hover img { transform:scale(1.05); }
+
+/* INFO */
+.product-info { display:flex; flex-direction:column; gap:20px; padding-top:10px; }
+.brand-label { font-size:11px; letter-spacing:4px; color:#ffcc00; font-weight:600; text-transform:uppercase; }
+.product-info h1 { font-family:'Playfair Display',serif; font-size:clamp(26px,3vw,40px); line-height:1.2; }
+.pricing { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+.price-new { font-size:30px; font-weight:700; }
+.price-old { font-size:17px; color:#bbb; text-decoration:line-through; }
+.discount-tag { background:#e60023; color:white; font-size:12px; font-weight:700; padding:4px 12px; border-radius:20px; }
+.desc { color:#666; font-size:14px; line-height:1.85; }
+
+/* SIZE */
+.size-section { }
+.size-label { font-size:13px; font-weight:600; margin-bottom:10px; }
+.size-label span { font-weight:400; color:#aaa; margin-left:6px; }
+.sizes { display:flex; gap:10px; flex-wrap:wrap; }
+.sz { width:46px; height:46px; border:1.5px solid #ddd; border-radius:10px; background:white; font-weight:600; font-size:13px; cursor:pointer; font-family:'Poppins',sans-serif; transition:.25s; }
+.sz:hover { border-color:#111; }
+.sz.active { background:#111; color:white; border-color:#111; }
+
+/* QTY */
+.qty-section { display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+.qty-wrap { display:flex; align-items:center; border:1.5px solid #ddd; border-radius:12px; overflow:hidden; }
+.qty-wrap button { width:44px; height:44px; border:none; background:none; font-size:20px; cursor:pointer; font-family:'Poppins',sans-serif; transition:.2s; }
+.qty-wrap button:hover { background:#f0f0f0; }
+.qty-wrap span { width:48px; text-align:center; font-weight:600; font-size:15px; }
+.stock-tag { font-size:13px; color:#1db954; font-weight:500; }
+
+/* ACTIONS */
+.action-btns { display:flex; gap:12px; flex-wrap:wrap; }
+.add-cart { flex:1; min-width:150px; padding:15px; background:#111; color:white; border:none; border-radius:14px; font-weight:700; font-size:15px; cursor:pointer; font-family:'Poppins',sans-serif; transition:.3s; }
+.add-cart:hover { background:#ffcc00; color:#000; }
+.buy-now { flex:1; min-width:150px; padding:15px; background:#ffcc00; color:#000; border:none; border-radius:14px; font-weight:700; font-size:15px; cursor:pointer; font-family:'Poppins',sans-serif; transition:.3s; }
+.buy-now:hover { transform:translateY(-3px); box-shadow:0 8px 24px rgba(255,204,0,.4); }
+
+/* DELIVERY */
+.delivery-info { background:#f9f9f9; border-radius:14px; padding:18px 20px; display:flex; flex-direction:column; gap:10px; }
+.d-item { display:flex; align-items:center; gap:10px; font-size:13px; color:#555; }
+
+/* REVIEWS */
+.reviews-section { padding:50px 60px; max-width:1200px; margin:0 auto 60px; }
+.reviews-section h3 { font-family:'Montserrat',sans-serif; font-size:22px; font-weight:700; margin-bottom:24px; }
+.reviews-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; }
+.review-card { background:white; border-radius:16px; padding:22px; box-shadow:0 4px 16px rgba(0,0,0,.06); }
+.stars { color:#ffcc00; letter-spacing:2px; font-size:16px; margin-bottom:6px; }
+.reviewer { font-weight:600; font-size:13px; margin-bottom:8px; color:#444; }
+.review-text { font-size:14px; color:#666; line-height:1.7; }
+
+@media(max-width:900px) {
+  .product-page { grid-template-columns:1fr; padding:30px 20px; gap:30px; }
+  .img-wrap { position:static; }
+  .reviews-section { padding:30px 20px; }
+  .navbar { padding:14px 20px; }
+}

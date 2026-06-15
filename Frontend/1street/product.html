@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1street — Product</title>
+  <link rel="stylesheet" href="product.css">
+</head>
+<body>
+
+  <div class="navbar">
+    <h1 class="logo" onclick="location.href='../1street.html'">1street</h1>
+    <div class="nav-icons">
+      <span onclick="history.back()">← Back</span>
+      <span onclick="location.href='cart.html'" style="position:relative">🛒<span id="cartBadge" class="badge">0</span></span>
+    </div>
+  </div>
+
+  <div class="product-page">
+
+    <!-- IMAGE -->
+    <div class="img-wrap">
+      <img id="pdImg" src="" alt="Product Image">
+    </div>
+
+    <!-- INFO -->
+    <div class="product-info">
+      <p class="brand-label" id="pdBrand">1street Collection</p>
+      <h1 id="pdName">Product Name</h1>
+
+      <div class="pricing">
+        <span class="price-new" id="pdNew">₹0</span>
+        <span class="price-old" id="pdOld">₹0</span>
+        <span class="discount-tag" id="pdDis">20% OFF</span>
+      </div>
+
+      <p class="desc">High quality streetwear crafted for comfort and style. Premium fabric blend — built to last and made to turn heads. Perfect for all seasons and every vibe.</p>
+
+      <!-- SIZE -->
+      <div class="size-section">
+        <p class="size-label">Select Size <span id="selectedSize">(M selected)</span></p>
+        <div class="sizes">
+          <button class="sz" onclick="selectSize(this,'XS')">XS</button>
+          <button class="sz" onclick="selectSize(this,'S')">S</button>
+          <button class="sz active" onclick="selectSize(this,'M')">M</button>
+          <button class="sz" onclick="selectSize(this,'L')">L</button>
+          <button class="sz" onclick="selectSize(this,'XL')">XL</button>
+          <button class="sz" onclick="selectSize(this,'XXL')">XXL</button>
+        </div>
+      </div>
+
+      <!-- QUANTITY -->
+      <div class="qty-section">
+        <p class="size-label">Quantity</p>
+        <div class="qty-wrap">
+          <button onclick="changeQty(-1)">−</button>
+          <span id="pdQty">1</span>
+          <button onclick="changeQty(1)">+</button>
+        </div>
+        <span class="stock-tag">✅ In Stock</span>
+      </div>
+
+      <!-- ACTIONS -->
+      <div class="action-btns">
+        <button class="add-cart" onclick="addToCart()">Add to Cart 🛒</button>
+        <button class="buy-now" onclick="buyNow()">Buy Now ⚡</button>
+      </div>
+
+      <!-- DELIVERY INFO -->
+      <div class="delivery-info">
+        <div class="d-item">🚚 <span>Free delivery on orders above ₹999</span></div>
+        <div class="d-item">🔄 <span>30-day hassle-free returns</span></div>
+        <div class="d-item">🔒 <span>100% secure checkout</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- REVIEWS -->
+  <div class="reviews-section">
+    <h3>Customer Reviews</h3>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <p class="stars">★★★★★</p>
+        <p class="reviewer">Rahul M. · Verified Buyer</p>
+        <p class="review-text">Absolutely fire product. The quality is top-notch and the fit is exactly as described. Got so many compliments!</p>
+      </div>
+      <div class="review-card">
+        <p class="stars">★★★★☆</p>
+        <p class="reviewer">Aman K. · Verified Buyer</p>
+        <p class="review-text">Really good fabric and stitching. Delivery was fast. Might size up next time but overall very happy with the purchase.</p>
+      </div>
+      <div class="review-card">
+        <p class="stars">★★★★★</p>
+        <p class="reviewer">Priya S. · Verified Buyer</p>
+        <p class="review-text">Bought this for my brother and he loves it. Premium feel, great packaging. Will definitely order again from 1street.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="product.js"></script>
+</body>
+</html>

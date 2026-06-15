@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1street — Login</title>
+<link rel="stylesheet" href="login.css">
+</head>
+<body>
+<canvas id="loginCanvas"></canvas>
+
+<div class="container">
+  <div class="brand-logo">1street</div>
+  <p class="brand-sub">Premium Men's Streetwear</p>
+
+  <div class="tabs">
+    <div class="tab active" onclick="switchTab('login',this)">Login</div>
+    <div class="tab" onclick="switchTab('register',this)">Register</div>
+  </div>
+
+  <!-- Login Form -->
+  <div id="loginForm" class="form active">
+    <div class="input-group">
+      <label>Email</label>
+      <input type="email" placeholder="Enter your email" id="loginEmail">
+    </div>
+    <div class="input-group">
+      <label>Password</label>
+      <input type="password" placeholder="Enter your password" id="loginPass">
+    </div>
+    <button id="loginButton">Login →</button>
+    <div class="toggle">Don't have an account? <span onclick="switchTabByName('register')">Register</span></div>
+  </div>
+
+  <!-- Register Form -->
+  <div id="registerForm" class="form">
+    <div class="input-group">
+      <label>Full Name</label>
+      <input type="text" placeholder="Enter your name" id="username">
+    </div>
+    <div class="input-group">
+      <label>Email</label>
+      <input type="email" placeholder="Enter your email" id="regEmail">
+    </div>
+    <div class="input-group">
+      <label>Password</label>
+      <input type="password" placeholder="Create password" id="regPass">
+    </div>
+    <button id="registerButton">Create Account →</button>
+    <div class="toggle">Already have an account? <span onclick="switchTabByName('login')">Login</span></div>
+  </div>
+</div>
+
+<script src="login.js"></script>
+</body>
+</html>

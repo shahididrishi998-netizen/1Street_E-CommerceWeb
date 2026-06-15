@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&family=Montserrat:wght@500;700&display=swap');
+
+* { margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth; }
+
+body { font-family:'Poppins',sans-serif; background:#f6f7fb; color:#111; overflow-x:hidden; }
+
+/* -------- NAVBAR -------- */
+.navbar {
+  position:sticky; top:0; z-index:1000;
+  display:flex; justify-content:space-between; align-items:center;
+  padding:18px 40px;
+  backdrop-filter:blur(14px);
+  background:rgba(0,0,0,0.88);
+  color:white;
+  box-shadow:0 4px 20px rgba(0,0,0,0.25);
+}
+.logo { font-size:28px; font-family:'Playfair Display',serif; font-weight:700; letter-spacing:2px; cursor:pointer; }
+.nav-icons span { margin-left:18px; font-size:20px; cursor:pointer; transition:.3s; }
+.nav-icons span:hover { transform:scale(1.2); color:#ffcc00; }
+
+/* -------- SEARCH -------- */
+.search-section { width:100%; background:white; padding:14px 20px; position:sticky; top:70px; z-index:999; box-shadow:0 4px 15px rgba(0,0,0,0.08); }
+.search-wrapper { position:relative; max-width:900px; margin:auto; }
+#searchInput { width:100%; padding:14px 48px 14px 20px; border-radius:50px; border:1.5px solid #ddd; font-size:15px; font-family:'Poppins',sans-serif; outline:none; transition:.3s; }
+#searchInput:focus { border-color:#111; box-shadow:0 4px 18px rgba(0,0,0,0.1); }
+.search-icon { position:absolute; right:18px; top:50%; transform:translateY(-50%); font-size:18px; color:#aaa; cursor:pointer; }
+.history-box { position:absolute; top:110%; left:0; width:100%; background:white; border-radius:14px; box-shadow:0 10px 30px rgba(0,0,0,0.1); display:none; max-height:240px; overflow-y:auto; z-index:100; }
+.history-item { padding:12px 18px; cursor:pointer; border-bottom:1px solid #f0f0f0; font-size:14px; transition:.2s; }
+.history-item:hover { background:#f8f8f8; }
+
+/* -------- HERO -------- */
+.hero-section {
+  position:relative; height:92vh;
+  display:flex; align-items:center; justify-content:center;
+  overflow:hidden; background:#0a0a0a;
+}
+#heroCanvas { position:absolute; inset:0; width:100%; height:100%; }
+.hero-content { position:relative; z-index:2; text-align:center; color:white; padding:20px; }
+.hero-tag { font-size:12px; letter-spacing:5px; color:#ffcc00; font-weight:600; text-transform:uppercase; margin-bottom:14px; }
+.hero-content h1 { font-family:'Playfair Display',serif; font-size:clamp(44px,7vw,96px); line-height:1.08; margin-bottom:20px; }
+.hero-content h1 span { color:#ffcc00; }
+.hero-desc { font-size:16px; color:rgba(255,255,255,.6); max-width:430px; margin:0 auto 36px; line-height:1.7; }
+.hero-btns { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+.btn-primary { padding:14px 36px; background:#ffcc00; color:#000; border:none; border-radius:50px; font-weight:700; font-size:15px; cursor:pointer; transition:.3s; font-family:'Poppins',sans-serif; }
+.btn-primary:hover { transform:translateY(-3px); box-shadow:0 10px 28px rgba(255,204,0,.4); }
+.btn-outline { padding:14px 36px; background:transparent; color:white; border:2px solid rgba(255,255,255,.35); border-radius:50px; font-weight:600; font-size:15px; cursor:pointer; transition:.3s; font-family:'Poppins',sans-serif; }
+.btn-outline:hover { border-color:#ffcc00; color:#ffcc00; }
+
+/* -------- SECTIONS -------- */
+.top-deals, .categories { padding:70px 40px; }
+h2 { text-align:center; font-family:'Montserrat',sans-serif; font-size:clamp(22px,3vw,34px); font-weight:700; margin-bottom:8px; }
+.section-sub { text-align:center; color:#888; font-size:14px; margin-bottom:36px; }
+
+/* -------- GRID / SCROLL ROW -------- */
+.grid { display:flex; overflow-x:auto; gap:20px; padding:10px 4px 20px; scroll-behavior:smooth; -ms-overflow-style:none; scrollbar-width:none; }
+.grid::-webkit-scrollbar { display:none; }
+
+/* -------- PRODUCT CARD -------- */
+.card { min-width:220px; flex-shrink:0; background:white; border-radius:18px; overflow:hidden; box-shadow:0 8px 24px rgba(0,0,0,.08); transition:.35s; cursor:pointer; position:relative; }
+.card:hover { transform:translateY(-12px); box-shadow:0 22px 44px rgba(0,0,0,.14); }
+.card img { width:100%; height:220px; object-fit:cover; display:block; transition:.4s; }
+.card:hover img { transform:scale(1.07); }
+.card-badge { position:absolute; top:12px; left:12px; background:#e60023; color:white; font-size:11px; font-weight:700; padding:4px 10px; border-radius:20px; }
+.card-body { padding:14px; }
+.card-brand { font-size:11px; color:#aaa; margin-bottom:4px; letter-spacing:1px; text-transform:uppercase; }
+.card-name { font-weight:600; font-size:14px; margin-bottom:8px; line-height:1.3; }
+.card-pricing { display:flex; align-items:center; gap:8px; margin-bottom:12px; }
+.price-new { font-weight:700; font-size:15px; }
+.price-old { text-decoration:line-through; color:#bbb; font-size:13px; }
+.buy-btn { width:100%; padding:10px; border:none; border-radius:10px; background:#111; color:white; font-weight:600; font-size:13px; cursor:pointer; transition:.3s; font-family:'Poppins',sans-serif; }
+.buy-btn:hover { background:#ffcc00; color:#000; }
+
+/* -------- CATEGORY CARD -------- */
+.cat-card { min-width:200px; height:240px; flex-shrink:0; border-radius:18px; overflow:hidden; position:relative; cursor:pointer; transition:.3s; }
+.cat-card:hover { transform:scale(1.04); }
+.cat-card img { width:100%; height:100%; object-fit:cover; display:block; }
+.cat-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(0,0,0,.65) 0%,transparent 55%); display:flex; align-items:flex-end; padding:18px; }
+.cat-name { color:white; font-weight:700; font-size:18px; font-family:'Montserrat',sans-serif; }
+
+/* -------- LATEST BANNER -------- */
+.latest { position:relative; padding:100px 40px; text-align:center; overflow:hidden; background:#0a0a0a; color:white; }
+#bannerCanvas { position:absolute; inset:0; width:100%; height:100%; }
+.latest-content { position:relative; z-index:2; }
+.latest-content h2 { color:white; margin-bottom:16px; }
+.latest-content p { color:rgba(255,255,255,.6); margin-bottom:28px; font-size:15px; }
+
+/* -------- FEATURES -------- */
+.features { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:20px; padding:70px 40px; background:white; }
+.feature-card { text-align:center; padding:28px 20px; border-radius:16px; background:#f9f9f9; box-shadow:0 4px 14px rgba(0,0,0,.05); }
+.feature-card span { font-size:34px; display:block; margin-bottom:12px; }
+.feature-card h4 { font-weight:600; font-size:15px; margin-bottom:6px; }
+.feature-card p { font-size:13px; color:#777; line-height:1.6; }
+
+/* -------- FOOTER -------- */
+footer { background:#0a0a0a; color:white; text-align:center; padding:60px 40px 30px; font-family:'Montserrat',sans-serif; }
+footer h3 { font-size:26px; letter-spacing:3px; font-family:'Playfair Display',serif; margin-bottom:12px; }
+footer p { color:rgba(255,255,255,.5); font-family:'Poppins',sans-serif; font-size:14px; }
+.footer-links { display:flex; justify-content:center; gap:28px; margin:22px 0; flex-wrap:wrap; }
+.footer-links a { color:rgba(255,255,255,.5); text-decoration:none; font-size:14px; font-family:'Poppins',sans-serif; transition:.25s; }
+.footer-links a:hover { color:white; }
+.copy { font-size:12px !important; color:rgba(255,255,255,.25) !important; margin-top:28px; }
+
+/* -------- REVEAL -------- */
+.reveal { opacity:0; transform:translateY(60px); transition:opacity .8s ease, transform .8s ease; }
+.reveal.active { opacity:1; transform:translateY(0); }
+
+/* -------- RESPONSIVE -------- */
+@media(max-width:768px) {
+  .navbar { padding:15px 20px; }
+  .top-deals, .categories { padding:50px 20px; }
+  .features { padding:50px 20px; }
+  footer { padding:50px 20px 24px; }
+  .hero-content h1 { font-size:42px; }
+}
