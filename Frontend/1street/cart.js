@@ -119,7 +119,7 @@ function checkout(total) {
   const cart = JSON.parse(localStorage.getItem("1street_cart") || "[]");
   const token = localStorage.getItem("token");
 
-  fetch("http://localhost:3000/api/orders", {
+  fetch("http://1street-backend.onrender.com/api/orders", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

@@ -30,5 +30,5 @@ app.get("/api/health", (req, res) => {
 
 /* -------- START -------- */
 app.listen(PORT, () => {
-  console.log(`🚀 1street server running at http://localhost:${PORT}`);
+  console.log(`🚀 1street server running...`);
 });
