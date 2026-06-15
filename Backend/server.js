@@ -23,6 +23,11 @@ app.use("/api/products", productRoutes);
 app.use("/api/cart", cartRoutes);
 app.use("/api/orders", orderRoutes);
 
+/* -------- ROOT REDIRECT -------- */
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../Frontend/1street.html"));
+});
+
 /* -------- HEALTH CHECK -------- */
 app.get("/api/health", (req, res) => {
   res.json({ status: "ok", message: "1street backend running 🚀" });
